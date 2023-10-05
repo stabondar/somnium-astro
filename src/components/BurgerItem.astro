@@ -1,0 +1,14 @@
+---
+const {link, text, index} = Astro.props;
+---
+
+<a class="burger__item" href={link}>
+    <div class="burger__item--row">
+        <span class="f-120 caps">{text}</span>
+        <div class="burger__index f-24">{index}</div>
+    </div>
+    <div class="burger__item--row is--mask">
+        <span class="f-120 caps">{text}</span>
+        <div class="burger__index f-24">{index}</div>
+    </div>
+</a>

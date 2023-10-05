@@ -1,0 +1,40 @@
+---
+import '../styles/components/burger.scss'
+import BurgerItem from './BurgerItem.astro';
+---
+
+<div class="burger">
+    <div class="container">
+        <div class="burger__body">
+            <div class="burger__list">
+                <BurgerItem link="#" text="Work" index="01" />
+                <BurgerItem link="#" text="Studio" index="02" />
+                <BurgerItem link="#" text="Contact" index="03" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // import Scroll from '../js/Scroll.js'
+
+    // const scroll = new Scroll()
+
+    const trigger = document.querySelector('.nav__icon')
+    const body = document.querySelector('body')
+
+    trigger.addEventListener('click', () =>
+    {
+        if(body.classList.contains('burger-open'))
+        {
+            body.classList.remove('burger-open')
+            // scroll.lenis.start()
+        }
+        else
+        {
+            body.classList.add('burger-open')
+            // scroll.lenis.stop()
+        }
+    })
+
+</script>

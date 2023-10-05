@@ -1,0 +1,67 @@
+.nav
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: calc(58 / var(--to-rem));
+    z-index: 9;
+    mix-blend-mode: difference;
+    color: var(--white);
+}
+
+.nav__logo
+{
+    display: block;
+    width: calc(112 / var(--to-rem));
+    height: calc(18 / var(--to-rem));
+}
+
+.nav__grid
+{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.nav__descr
+{
+    text-align: center;
+}
+
+.nav__icon
+{
+    width: calc(60 / var(--to-rem));
+    height: calc(12 / var(--to-rem));
+    position: relative;
+    justify-self: end;
+    cursor: pointer;
+}
+
+.nav__icon--lines
+{
+    width: calc(60 / var(--to-rem));
+    height: calc(60 / var(--to-rem));
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.nav__line
+{
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    
+    &:nth-child(1)
+    {
+        transform: translateY(calc(-4.5 / var(--to-rem)));
+    }
+
+    &:nth-child(2)
+    {
+        transform: translateY(calc(4.5 / var(--to-rem)));
+    }
+}

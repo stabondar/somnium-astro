@@ -1,0 +1,78 @@
+.burger
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+    z-index: 8;
+    display: block;
+    transition: clip-path var(--ease);
+    clip-path: inset(0 0 100% 0);
+}
+
+.burger__body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 100vh;
+}
+
+.burger__list
+{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.burger__item
+{
+    position: relative;
+    cursor: pointer;
+
+    &:hover
+    {
+        .burger__item--row:nth-child(2)
+        {
+            clip-path: inset(0 0 0 0);
+        }
+    }
+}
+
+.burger__item--row
+{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    &:nth-child(1)
+    {
+        color: #404040;
+    }
+
+    &:nth-child(2)
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        clip-path: inset(100% 0 0 0);
+        transition: clip-path var(--fast-ease);
+    }
+}
+
+.burger__index
+{
+    transform: translateY(0.9rem);
+}
+
+.burger-open
+{
+    .burger
+    {
+        clip-path: inset(0 0 0 0);
+    }
+}
